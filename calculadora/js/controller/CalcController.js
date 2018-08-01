@@ -12,6 +12,7 @@ class CalcController {
         this._dateEl = document.querySelector("#data");
         this._timeEl = document.querySelector("#hora");
         this._currentDate;
+        this._operation = []; //array vazio.
         this.initialize();
         this.initButtonsEvents();
     }
@@ -37,6 +38,60 @@ class CalcController {
             elements.addEventListener(event, fn, false);
        
         });
+    }
+
+    //metodo para limpar todos os dígitos
+    clearAll() {
+
+    }
+
+    //metodo para limpar todos os dígitos
+    cancelEntry() {
+        
+    }
+
+    setError() {
+        this.displayCalc = "Error";
+    }
+
+    execBtn(value) {
+        switch (value) {
+            case 'ca':
+            this.clearAll();
+            break;
+
+            case 'ce':
+            this.cancelEntry();
+            break;
+
+            case 'soma':
+
+            break;
+
+            case 'subtracao':
+            
+            break;
+
+            case 'divisao':
+            
+            break;
+
+            case 'multiplicacao':
+            
+            break;
+
+            case 'porcento':
+            
+            break;
+
+            case 'igual':
+            
+            break;
+            
+            default:
+                this.setError();
+                break;
+        }
     }
 
 
